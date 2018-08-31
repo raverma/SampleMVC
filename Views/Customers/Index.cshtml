@@ -24,7 +24,7 @@
             <td>@customer.CustomerType.Type</td>
             <td>@customer.Abbreviation</td>
             <td>@customer.IsActive</td>
-            <td>@Html.ActionLink("Edit", "Edit", "Customers", new { customerId = customer.Id }, null)
+            <td>@Html.ActionLink("EDIT", "Edit", "Customers", new { customerId = customer.Id }, null)
                 &nbsp;&nbsp;<button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
             </td>
         </tr>

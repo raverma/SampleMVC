@@ -13,7 +13,7 @@
 {
     <div>
         @*@Html.LabelFor(m => m.Customer.Id)
-            @Html.TextBoxFor(m => m.Customer.Id, new { @class = "form-control" })*@
+        @Html.TextBoxFor(m => m.Customer.Id, new { @class = "form-control" })*@
         @Html.Hidden("Customer.Id", (Model.Customer != null) ? Model.Customer.Id : 0)
         @*@Html.HiddenFor(m => m.Customer.Id)*@
 

@@ -70,7 +70,9 @@ namespace SampleMVC.Controllers
 	    [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
 	    public ActionResult ByReleaseDate(int year, int month)
 	    {
-		    return Content(year + "/" + month);
+            var movies = _context.Movies.Where(m => m.ReleaseDate.Year == year && m.ReleaseDate.Month == month).ToList();
+            //return Content(year + "/" + month);
+            return View("Index", movies);
 	    }
 
         public ActionResult Index()
